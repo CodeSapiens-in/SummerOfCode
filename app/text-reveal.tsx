@@ -140,14 +140,19 @@ const Stars = () => {
   const randomMove = () => Math.random() * 4 - 2;
   const randomOpacity = () => Math.random();
   const random = () => Math.random();
+  
+  // Calculate these values once to ensure consistency
+  const randomTop = `${random() * 100}%`;
+  const randomLeft = `${random() * 100}%`;
+
   return (
     <div className="absolute inset-0">
       {[...Array(140)].map((_, i) => (
         <motion.span
           key={`star-${i}`}
           animate={{
-            top: `calc(${random() * 100}% + ${randomMove()}px)`,
-            left: `calc(${random() * 100}% + ${randomMove()}px)`,
+            top: `calc(${randomTop} + ${randomMove()}px)`,
+            left: `calc(${randomLeft} + ${randomMove()}px)`,
             opacity: randomOpacity(),
             scale: [1, 1.2, 0],
           }}
@@ -158,8 +163,8 @@ const Stars = () => {
           }}
           style={{
             position: "absolute",
-            top: `${random() * 100}%`,
-            left: `${random() * 100}%`,
+            top: randomTop, // Use the pre-calculated value
+            left: randomLeft, // Use the pre-calculated value
             width: `2px`,
             height: `2px`,
             backgroundColor: "white",
