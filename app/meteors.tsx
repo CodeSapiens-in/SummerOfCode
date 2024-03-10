@@ -1,4 +1,3 @@
-"use client"
 import { cn } from "./utils/cn";
 import clsx from "clsx";
 import React from "react";
@@ -26,8 +25,12 @@ export const Meteors = ({
     const styleTag = document.createElement('style');
     styleTag.textContent = meteorKeyframes;
     document.head.appendChild(styleTag);
-    return () => document.head.removeChild(styleTag);
-  }, []);
+    
+    // Cleanup function
+    return () => {
+      document.head.removeChild(styleTag);
+    };
+  }, []); // Empty dependency array indicates this effect runs only once
 
   return (
     <>
@@ -35,6 +38,20 @@ export const Meteors = ({
         const leftPosition = Math.floor(Math.random() * (400 - -400) + -400);
         const size = 1 + 'px';
         const animationDuration = Math.floor(Math.random() * (10 - 2) + 2) + 's';
+
+        const meteorStyle: React.CSSProperties = {
+          position: 'absolute',
+          top: 0,
+          width: size,
+          height: size,
+          left: `calc(-50% + ${leftPosition}px)`,
+          borderRadius: '9999px',
+          backgroundColor: '#64748b',
+          boxShadow: '0 0 0 1px #ffffff10',
+          animation: 'meteor linear infinite',
+          animationDuration: animationDuration,
+        };
+
         return (
           <span
             key={"meteor" + idx}
@@ -42,28 +59,10 @@ export const Meteors = ({
               "before:content-[''] before:absolute before:top-1/2 before:transform before:-translate-y-[50%] before:w-[50px] before:h-[1px] before:bg-gradient-to-r before:from-[#64748b] before:to-transparent",
               className
             )}
-            style={{
-              ...meteorStyle,
-              left: `calc(-50% + ${leftPosition}px)`,
-              width: size,
-              height: size,
-              animationDuration: animationDuration
-            }}
+            style={meteorStyle}
           ></span>
         );
       })}
     </>
   );
-};
-
-// Define styles for the meteor element
-const meteorStyle = {
-  position: 'absolute',
-  top: 0,
-  width: '0.5rem',
-  height: '0.5rem',
-  borderRadius: '9999px',
-  backgroundColor: '#64748b',
-  boxShadow: '0 0 0 1px #ffffff10',
-  animation: 'meteor linear infinite',
 };
