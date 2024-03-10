@@ -13,14 +13,14 @@ const About = () => {
     <div className='max-w-6xl mx-auto text-center flex items-center justify-center flex-col p-4 '>
 
         <TextRevealCard
-        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vitae aliquid iste excepturi erspiciatis harum libero rem ven"
-        revealText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vitae aliquid iste excepturi perspiciatis harum libero rem veniam temporibus voluptatum. Odio nisi error aperiam corporis! At eum eligendi incidunt fugit? "
-      className="text-lg w-full"
+        text="Crack the code, find the keys, unlock a summer of endless possibilities in the open-source "
+        revealText="Summer of Code bridges passionate individuals with open-source communities. Students gain invaluable real-world experience, companies discover emerging talent, and extended project timelines foster a journey of learning and collaboration that goes beyond traditional hackathons"
+      className="text-lg w-full text-center"
       >
-        <TextRevealCardTitle className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-600  font-bold text-6xl">
+        <TextRevealCardTitle className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-600 text-center  font-bold text-6xl">
           What is CSSOC ? 
         </TextRevealCardTitle>
-        <TextRevealCardDescription>
+        <TextRevealCardDescription className="text-center">
           Hover over the text to reveal info
         </TextRevealCardDescription>
       </TextRevealCard>

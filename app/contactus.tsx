@@ -21,22 +21,10 @@ export function SignupFormDemo() {
       <h2 className="font-bold text-xl text-neutral-200">
         For Sponsorships and Partnerships
       </h2>
-      <p className=" text-sm max-w-sm mt-2 text-neutral-300">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-      </p>
+
 
    
-      <form className="" onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row  md:space-x-2 mb-4 ">
-          <LabelInputContainer>
-            <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Leo" type="text" />
-          </LabelInputContainer>
-          <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Das" type="text" />
-          </LabelInputContainer>
-        </div>
+      <form className="mt-4" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
           <Input id="email" placeholder="leodas@vanakkam.com" type="email" />

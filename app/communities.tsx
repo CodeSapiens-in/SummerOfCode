@@ -22,12 +22,7 @@ const Communities = () => {
               "Google developer Student Club from Sai Ram Institue of Technology",
             link: "https://ssn.edu.in",
           },
-          {
-            title: "Namma Flutter",
-            description:
-              "Namma Flutter is Chennai's own Flutter Community",
-            link: "https://ssn.edu.in",
-          },
+
         
       ];
 
