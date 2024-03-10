@@ -41,18 +41,7 @@ export function SignupFormDemo() {
           <Label htmlFor="email">Email Address</Label>
           <Input id="email" placeholder="leodas@vanakkam.com" type="email" />
         </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Password</Label>
-          <Input id="password" placeholder="••••••••" type="password" />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-8">
-          <Label htmlFor="twitterpassword">Your twitter password</Label>
-          <Input
-            id="twitterpassword"
-            placeholder="••••••••"
-            type="twitterpassword"
-          />
-        </LabelInputContainer>
+     
 
         <LabelInputContainer className="mb-8">
           <Label htmlFor="query">Message</Label>
