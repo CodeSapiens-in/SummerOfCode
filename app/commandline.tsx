@@ -10,12 +10,14 @@ const CommandLine =  (props = {}) => {
     ]);
     // Terminal has 100% width by default so it should usually be wrapped in a container div
     return (
-      <div className="max-w-6xl mx-auto  flex items-center justify-center flex-col p-4">
+      
+      <div className="max-w-6xl mx-auto  flex items-center justify-center flex-col p-4  w-3/4  h-screen">
         <Terminal name='CodeSapiens Summer of Code' colorMode={ ColorMode.Dark }  
         onInput={ terminalInput => console.log(`New terminal input received: '${ terminalInput }'`) }>
           { terminalLineData }
         </Terminal>
       </div>
+      
     )
   };
 
