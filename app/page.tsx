@@ -10,12 +10,13 @@ import ElegantComponent from "./test"
 
 export default function Home() {
   return (<main>
-    {/* <CommandLine/> */}
+    {/* <CommandLine/>  */}
     <BackgroundBeamsDemo />;
     <About />
     <Communities />
     <SignupFormDemo />
     <What />
     <Footer />
+
   </main>)
 }
