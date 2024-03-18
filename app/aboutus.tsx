@@ -20,7 +20,6 @@ const About = () => {
       What is CSSOC ? 
     </TextRevealCardTitle>
     <TextRevealCardDescription className="text-center hidden md:block">
-      <p>Helo</p>
     </TextRevealCardDescription>
   </TextRevealCard>
 </div>
