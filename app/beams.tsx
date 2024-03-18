@@ -5,7 +5,7 @@ import { TypewriterEffectSmooth } from "./typewriter";
 
 import { TextGenerateEffect } from "./text-generate";
  
-const word = `Explore. Evolve. Engineer
+const word = `Tamil Nadus first and largest Open Source Event
 `;
 
 

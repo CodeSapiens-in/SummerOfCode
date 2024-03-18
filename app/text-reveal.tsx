@@ -30,39 +30,39 @@ export const TextRevealCard = ({
     }
   }, []);
 
-  function mouseMoveHandler(event: any) {
-    event.preventDefault();
+  // function mouseMoveHandler(event: any) {
+  //   event.preventDefault();
 
-    const { clientX } = event;
-    if (cardRef.current) {
-      const relativeX = clientX;
-      setWidthPercentage((relativeX / localWidth) * 250);
-    }
-  }
+  //   const { clientX } = event;
+  //   if (cardRef.current) {
+  //     const relativeX = clientX - left;
+  //     setWidthPercentage((relativeX / localWidth) * 100);
+  //   }
+  // }
 
-  function mouseLeaveHandler() {
-    setIsMouseOver(false);
-    setWidthPercentage(0);
-  }
-  function mouseEnterHandler() {
-    setIsMouseOver(true);
-  }
+  // function mouseLeaveHandler() {
+  //   setIsMouseOver(false);
+  //   setWidthPercentage(0);
+  // }
+  // function mouseEnterHandler() {
+  //   setIsMouseOver(true);
+  // }
 
   const rotateDeg = (widthPercentage - 50) * 0.1;
   return (
     <div
-      onMouseEnter={mouseEnterHandler}
-      onMouseLeave={mouseLeaveHandler}
-      onMouseMove={mouseMoveHandler}
+      // onMouseEnter={mouseEnterHandler}
+      // onMouseLeave={mouseLeaveHandler}
+      // onMouseMove={mouseMoveHandler}
       ref={cardRef}
       className={cn(
-        "bg-[#131313] border border-white/[0.08] w-[40rem] rounded-lg p-8 relative  text-center overflow-hidden",
+        "bg-[#1d1c20] border border-white/[0.08] w-[40rem] rounded-lg p-8 relative overflow-hidden",
         className
       )}
     >
       {children}
 
-      <div className="h-40 w-full relative flex items-center justify-center text-center">
+      <div className="h-full  relative flex items-center overflow-hidden">
         <motion.div
           style={{
             width: "100%",
@@ -78,13 +78,14 @@ export const TextRevealCard = ({
                 }
           }
           transition={isMouseOver ? { duration: 0 } : { duration: 0.4 }}
-          className="absolute bg-[#131313] z-20  will-change-transform"
+          className="absolute bg-[#1d1c20] z-20 flex justify-center items-center text-center  will-change-transform"
         >
           <p
             style={{
               textShadow: "4px 4px 15px rgba(0,0,0,0.5)",
+              textAlign: "center",
             }}
-            className="text-base sm:text-xl py-10 font-bold text-slate-200 bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
+            className="text-lg text-center  flex justify-center items-center py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
           >
             {revealText}
           </p>
@@ -99,8 +100,8 @@ export const TextRevealCard = ({
           className="h-40 w-[8px] bg-gradient-to-b from-transparent via-neutral-800 to-transparent absolute z-50 will-change-transform"
         ></motion.div>
 
-        <div className=" text-center overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
-          <p className="text-base  text-center sm:text-xl py-10 font-bold bg-clip-text text-transparent bg-[#323238]">
+        <div className=" overflow-hidden text-center [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]">
+          <p className="text-lg text-center flex justify-center items-center py-10 font-bold bg-clip-text text-white bg-[#323238]">
             {text}
           </p>
           <MemoizedStars />
@@ -118,7 +119,7 @@ export const TextRevealCardTitle = ({
   className?: string;
 }) => {
   return (
-    <h2 className={twMerge("text-white text-center text-lg mb-2", className)}>
+    <h2 className={twMerge("text-white text-lg mb-2", className)}>
       {children}
     </h2>
   );
@@ -132,7 +133,7 @@ export const TextRevealCardDescription = ({
   className?: string;
 }) => {
   return (
-    <p className={twMerge("text-[#a9a9a9] text-sm text-center items-center justify-center", className)}>{children}</p>
+    <p className={twMerge("text-[#a9a9a9] text-sm", className)}>{children}</p>
   );
 };
 
@@ -140,19 +141,14 @@ const Stars = () => {
   const randomMove = () => Math.random() * 4 - 2;
   const randomOpacity = () => Math.random();
   const random = () => Math.random();
-  
-  // Calculate these values once to ensure consistency
-  const randomTop = `${random() * 100}%`;
-  const randomLeft = `${random() * 100}%`;
-
   return (
     <div className="absolute inset-0">
       {[...Array(140)].map((_, i) => (
         <motion.span
           key={`star-${i}`}
           animate={{
-            top: `calc(${randomTop} + ${randomMove()}px)`,
-            left: `calc(${randomLeft} + ${randomMove()}px)`,
+            top: `calc(${random() * 100}% + ${randomMove()}px)`,
+            left: `calc(${random() * 100}% + ${randomMove()}px)`,
             opacity: randomOpacity(),
             scale: [1, 1.2, 0],
           }}
@@ -163,15 +159,15 @@ const Stars = () => {
           }}
           style={{
             position: "absolute",
-            top: randomTop, // Use the pre-calculated value
-            left: randomLeft, // Use the pre-calculated value
+            top: `${random() * 100}%`,
+            left: `${random() * 100}%`,
             width: `2px`,
             height: `2px`,
             backgroundColor: "white",
             borderRadius: "50%",
             zIndex: 1,
           }}
-          className="block"
+          className="inline-block"
         ></motion.span>
       ))}
     </div>
