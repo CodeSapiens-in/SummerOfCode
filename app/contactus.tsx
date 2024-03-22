@@ -14,6 +14,11 @@ export function SignupFormDemo() {
     e.preventDefault();
     console.log("Form submitted");
   };
+
+
+  const link = () => {
+    window.open("https://www.justinbenito.com", "_blank");
+  }
   return (
     <div className="">
         <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-orange-600  font-bold text-6xl text-center mt-32'>Contact Us</h1>
@@ -24,14 +29,21 @@ export function SignupFormDemo() {
 
 
    
-      <form className="mt-4" onSubmit={handleSubmit}>
+      <form className="mt-4" onSubmit={handleSubmit} action="https://formsubmit.co/your@email.com" method="POST">
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="leodas@vanakkam.com" type="email" />
+          <Label htmlFor="email" className="text-orange-500">Email Address</Label>
+          <h1 className="text-white font-bold text-xl">justinbenito2213005@ssn.edu.in</h1>
+          {/* <Input id="email" placeholder="leodas@vanakkam.com" type="email" name="email"/> */}
+        </LabelInputContainer>
+     
+        <LabelInputContainer className="mb-4">
+          <Label htmlFor="email" className="text-orange-500">Contact Number</Label>
+          <h1 className="text-white font-bold text-xl">+91 9500002612</h1>
+          {/* <Input id="email" placeholder="leodas@vanakkam.com" type="email" name="email"/> */}
         </LabelInputContainer>
      
 
-        <LabelInputContainer className="mb-8">
+        {/* <LabelInputContainer className="mb-8">
           <Label htmlFor="query">Message</Label>
           <textarea  id="query"
             placeholder="Vanakkam..." 
@@ -44,12 +56,13 @@ export function SignupFormDemo() {
             >
            
             </textarea>
-        </LabelInputContainer>
+        </LabelInputContainer> */}
 
 
         <button
           className="bg-gradient-to-br relative group/btn from-zinc-900 to-zinc-900  block bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
+          onClick={link}
         >
           Send Us &rarr;
           <BottomGradient />
