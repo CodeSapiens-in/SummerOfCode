@@ -5,8 +5,7 @@ import { TypewriterEffectSmooth } from "./typewriter";
 
 import { TextGenerateEffect } from "./text-generate";
  
-const word = `Tamil Nadus first and largest Open Source Event
-`;
+const word = `Tamil Nadus biggest ever Open Source Event`;
 
 
 export function BackgroundBeamsDemo() {

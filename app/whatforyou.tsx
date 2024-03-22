@@ -30,18 +30,14 @@ const What = () => {
           </div>
 
           <h1 className="font-bold text-xl text-white mb-4 relative z-50">
-            Meteors because they&apos;re cool
+            Skill Enhancement
           </h1>
 
-          <p className="font-normal text-base text-orange-200 mb-4 relative z-50">
-            I don&apos;t know what to write so I&apos;ll just paste something
-            cool here. One more sentence because lorem ipsum is just
-            unacceptable. Won&apos;t ChatGPT the shit out of this.
+          <p className="font-normal text-base text-orange-200 mb-4 relative z-50  text-justify">
+          Gain valuable experience and skills through workshops, mentorship, and hands-on open source development. These opportunities will not only enhance your technical abilities but also enrich your understanding of collaborative software development practices
           </p>
 
-          <button className="border px-4 py-1 rounded-lg    hover:bg-white hover:text-black transition-opacity transition-opacity transition:all border-gray-500 text-gray-300">
-            Explore
-          </button>
+  
 
           {/* Meaty part - Meteor effect */}
           <Meteors number={20} />
@@ -71,18 +67,14 @@ const What = () => {
           </div>
 
           <h1 className="font-bold text-xl text-white mb-4 relative z-50">
-            Meteors because they&apos;re cool
+          Incentives and Recognition
           </h1>
 
-          <p className="font-normal text-base text-orange-200 mb-4 relative z-50">
-            I don&apos;t know what to write so I&apos;ll just paste something
-            cool here. One more sentence because lorem ipsum is just
-            unacceptable. Won&apos;t ChatGPT the shit out of this.
+          <p className="font-normal text-base text-orange-200 mb-4 relative z-50 justify-start text-justify">
+          Earn certificates of participation, compete for prize money, and receive exclusive goodies. Your contributions will be acknowledged and rewarded, motivating you to excel and make a meaningful impact within the open source community.
           </p>
 
-          <button className="border px-4 py-1 rounded-lg    hover:bg-white hover:text-black transition-opacity transition-opacity transition:all  border-gray-500 text-gray-300">
-            Explore
-          </button>
+    
 
           {/* Meaty part - Meteor effect */}
           <Meteors number={20} />
@@ -112,18 +104,14 @@ const What = () => {
           </div>
 
           <h1 className="font-bold text-xl text-white mb-4 relative z-50">
-            Meteors because they&apos;re cool
+          Networking and Support
           </h1>
 
-          <p className="font-normal text-base text-orange-200 mb-4 relative z-50">
-            I don&apos;t know what to write so I&apos;ll just paste something
-            cool here. One more sentence because lorem ipsum is just
-            unacceptable. Won&apos;t ChatGPT the shit out of this.
+          <p className="font-normal text-base text-orange-200 mb-4 relative z-50  text-justify">
+          Connect with like-minded individuals, industry experts, and community partners. Engage in networking opportunities, receive guidance from mentors, and build lasting relationships that can propel your career and personal development forward.
           </p>
 
-          <button className="border px-4 py-1 rounded-lg   hover:bg-white hover:text-black transition-opacity   border-gray-500 text-gray-300">
-            Explore
-          </button>
+      
 
           {/* Meaty part - Meteor effect */}
           <Meteors number={20} />

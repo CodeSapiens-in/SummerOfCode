@@ -5,24 +5,35 @@ import { HoverEffect } from "./cardhover";
 const Communities = () => {
  const projects = [
         {
-          title: "GDSC SSN",
+          title: "GDSC Sairam",
           description:
-            "Google developer Student Club from SSN College of Engineering",
-          link: "https://ssn.edu.in",
+            "Google developer Student Club from Sairam College of Engineering",
+          link: "",
         },
         {
-            title: "GDSC RMKEC",
+            title: "GDSC Rajalakshmi Engineering College",
             description:
-              "Google developer Student Club from RMK Engineering College",
-            link: "https://ssn.edu.in",
+              "Google developer Student Club from Rajalakshmi Engineering College",
+            link: "",
         },
           {
-            title: "GDSC Sai Ram",
+            title: "GDSC St. Josephs College of Engineering and Technology",
             description:
-              "Google developer Student Club from Sai Ram Institue of Technology",
-            link: "https://ssn.edu.in",
+              "Google developer Student Club from St. Josephs College of Engineering and Technology",
+            link: "",
           },
-
+          {
+            title: "Trio Devs Trichy",
+            description:
+              "Trio Devs Trichy is a community of freelancers and students who work on projects and learn together new technologies",
+            link: "",
+          },
+          {
+            title: "Namma Flutter | Flutter Chennai",
+            description:
+              "Namma Flutter is our Flutter Chennai community focused on sharing the enthusiasm and geekiness of Namma Flutter Developers",
+            link: "",
+          },
         
       ];
 

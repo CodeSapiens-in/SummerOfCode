@@ -7,6 +7,7 @@ import Footer from "./footer";
 import What from "./whatforyou";
 import CommandLine from "./commandline";
 import ElegantComponent from "./test"
+import OutlinedTimeline from "./timeline"
 
 export default function Home() {
   return (<main>
@@ -16,6 +17,7 @@ export default function Home() {
     <Communities />
     <SignupFormDemo />
     <What />
+    <OutlinedTimeline />
     <Footer />
 
   </main>)
